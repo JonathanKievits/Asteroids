@@ -32,10 +32,10 @@ public class PlayerMovement : MonoBehaviour
 
         _movement = new Vector3(x, 0f, z);
         transform.Rotate(rotation * rotationSpeed * Time.deltaTime);
-        if (Input.GetKey(KeyCode.LeftArrow))
+        if (Input.GetKey(KeyCode.A))
         {
             rotationSpeed = -7;
-        }else if (Input.GetKey(KeyCode.RightArrow))
+        }else if (Input.GetKey(KeyCode.D))
         {
             rotationSpeed = 7;
         }
