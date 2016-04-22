@@ -4,23 +4,31 @@ using System.Collections;
 public class CameraSwitch : MonoBehaviour {
 
     public Camera MainCamera;
-    public Camera TPCamera;
+    public Camera Camera1;
+    public Camera Camera2;
 
 	// Use this for initialization
 	void Start () {
         
        MainCamera.enabled = true;
-        TPCamera.enabled = false;
+        Camera1.enabled = false;
+        Camera2.enabled = false;
 	
 	}
 	
 	// Update is called once per frame
 	void Update () {
-        if (Input.GetKeyUp(KeyCode.R))
+        if (Input.GetKeyUp(KeyCode.Z))
         {
             MainCamera.enabled = !MainCamera.enabled;
-            TPCamera.enabled = !TPCamera.enabled;
+            Camera1.enabled = !Camera1.enabled;
         }
+        if (Input.GetKeyUp(KeyCode.X))
+        {
+            Camera1.enabled = !Camera1.enabled;
+            Camera2.enabled = !Camera2.enabled;
+        }
+
 	
 	}
 }
