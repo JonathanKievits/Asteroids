@@ -22,13 +22,13 @@ public class PlayerMovement : MonoBehaviour
         float z = 0;
         if (Input.GetKey(KeyCode.W))
         {
-            MoveFor();
+            MoveFor ();
         }
         else if (Input.GetKey(KeyCode.S))
         {
             MoveBack();
         }
-
+        
 
         _movement = new Vector3(x, 0f, z);
         transform.Rotate(rotation * rotationSpeed * Time.deltaTime);

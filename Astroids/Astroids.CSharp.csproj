@@ -64,8 +64,20 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\BoatSpawner.cs" />
+    <Compile Include="Assets\Scripts\CSwitch.cs" />
+    <Compile Include="Assets\Scripts\CameraFollow.cs" />
+    <Compile Include="Assets\Scripts\CameraRFollow.cs" />
+    <Compile Include="Assets\Scripts\CameraSwitch.cs" />
     <Compile Include="Assets\Scripts\EnemyMovement.cs" />
+    <Compile Include="Assets\Scripts\Highscore.cs" />
+    <Compile Include="Assets\Scripts\OOBCounter.cs" />
+    <Compile Include="Assets\Scripts\Player2Shooting2_1.cs" />
+    <Compile Include="Assets\Scripts\Player2Shooting2_2.cs" />
     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
+    <Compile Include="Assets\Scripts\PlayerMovement2.cs" />
+    <Compile Include="Assets\Scripts\PlayerShooting1_1.cs" />
+    <Compile Include="Assets\Scripts\PlayerShooting1_2.cs" />
+    <Compile Include="Assets\Scripts\Projectile.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\SyntaxTree\UnityVS\2015\UnityVS.CSharp.targets" />
 </Project>
