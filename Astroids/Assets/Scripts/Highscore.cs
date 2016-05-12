@@ -8,21 +8,30 @@ public class Highscore : MonoBehaviour {
     private float highScore;
     private int score;
 
-    void Start () {
-        score = 0;
+    void Start() {
         highScore = PlayerPrefs.GetFloat("High Score");
     }
-	
-	void Update () {
+
+    void Update() {
         if (score > highScore)
         {
             highScore = score;
             PlayerPrefs.SetFloat("High Score", highScore);
         }
-        else {
-            score++;
-        }
         hScoreText.text = "Highscore: " + highScore.ToString("f0");
-        scoreText.text = "Score: " + score.ToString("f0");
+        scoreText.text = "Score: " + score.ToString();
+    }
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Enemy"))
+        {
+            hitpoints();
+            Destroy(other.gameObject);
+            Destroy(gameObject);
+        }
+    }
+    void hitpoints()
+    {
+        score +=1;
     }
 }
