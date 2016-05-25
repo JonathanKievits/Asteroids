@@ -19,4 +19,12 @@ public class Projectile : MonoBehaviour
     {
         _speed = value;
     }
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("EnemyShip"))
+        {
+            Destroy(other.gameObject);
+            Destroy(gameObject);
+        }
+    }
 }
