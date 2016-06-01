@@ -6,10 +6,12 @@ public class Highscore : MonoBehaviour {
     public Text hScoreText;
     public Text scoreText;
     private float highScore;
-    private int score;
+    [SerializeField]
+    float score;
 
     void Start() {
         highScore = PlayerPrefs.GetFloat("High Score");
+        score = 0;
     }
 
     void Update() {
@@ -18,12 +20,12 @@ public class Highscore : MonoBehaviour {
             highScore = score;
             PlayerPrefs.SetFloat("High Score", highScore);
         }
-        hScoreText.text = "Highscore: " + highScore.ToString("f0");
-        scoreText.text = "Score: " + score.ToString();
+        scoreText.text = "Score: " + score.ToString(" ");
+        hScoreText.text = "Highscore: " + highScore.ToString(" ");
     }
     void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Enemy"))
+        if (other.gameObject.CompareTag("Enemy"))
         {
             hitpoints();
             Destroy(other.gameObject);
@@ -32,6 +34,6 @@ public class Highscore : MonoBehaviour {
     }
     void hitpoints()
     {
-        score +=1;
+        score++;
     }
 }
