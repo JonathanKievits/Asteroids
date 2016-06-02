@@ -63,7 +63,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="Astroids.CSharp.Plugins.csproj">
+      <Project>{68044F1F-9B12-17BA-738A-1264A668BEB5}</Project>
+      <Name>Astroids.CSharp.Plugins</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
     <Compile Include="Assets\Scripts\BoatSpawner.cs" />
+    <Compile Include="Assets\Scripts\BoatSpawning.cs" />
     <Compile Include="Assets\Scripts\CSwitch.cs" />
     <Compile Include="Assets\Scripts\CameraFollow.cs" />
     <Compile Include="Assets\Scripts\CameraRFollow.cs" />
@@ -80,6 +87,22 @@
     <Compile Include="Assets\Scripts\PlayerShooting1_1.cs" />
     <Compile Include="Assets\Scripts\PlayerShooting1_2.cs" />
     <Compile Include="Assets\Scripts\Projectile.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Standard Assets\Environment\Water (Basic)\Scripts\WaterBasic.cs.txt" />
+    <None Include="Assets\Standard Assets\Environment\Water (Basic)\Shaders\FXWaterBasic.shader" />
+    <None Include="Assets\Standard Assets\Environment\Water\Water\Scripts\Displace.cs.txt" />
+    <None Include="Assets\Standard Assets\Environment\Water\Water\Scripts\GerstnerDisplace.cs.txt" />
+    <None Include="Assets\Standard Assets\Environment\Water\Water\Scripts\MeshContainer.cs.txt" />
+    <None Include="Assets\Standard Assets\Environment\Water\Water\Scripts\PlanarReflection.cs.txt" />
+    <None Include="Assets\Standard Assets\Environment\Water\Water\Scripts\SpecularLighting.cs.txt" />
+    <None Include="Assets\Standard Assets\Environment\Water\Water\Scripts\Water.cs.txt" />
+    <None Include="Assets\Standard Assets\Environment\Water\Water\Scripts\WaterBase.cs.txt" />
+    <None Include="Assets\Standard Assets\Environment\Water\Water\Scripts\WaterTile.cs.txt" />
+    <None Include="Assets\Standard Assets\Environment\Water\Water\Shaders\FXWaterPro.shader" />
+    <None Include="Assets\Standard Assets\Environment\Water\Water4\Shaders\FXWater4Advanced.shader" />
+    <None Include="Assets\Standard Assets\Environment\Water\Water4\Shaders\FXWater4Simple.shader" />
+    <None Include="Assets\Standard Assets\Environment\Water\Water4\Shaders\WaterInclude.cginc" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\SyntaxTree\UnityVS\2015\UnityVS.CSharp.targets" />
 </Project>

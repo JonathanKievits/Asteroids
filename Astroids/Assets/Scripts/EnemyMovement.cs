@@ -27,10 +27,11 @@ public class EnemyMovement : MonoBehaviour
 
     void Update()
     {
-        randomTime = Random.Range(1,3);
+        randomTime = Random.Range(1, 3);
         rotationTime = randomTime;
         transform.Rotate(new Vector3(0, rotationSpeed, 0 * Time.deltaTime));
         transform.position += transform.forward * movementSpeed * Time.deltaTime;
+
 
     }
 }

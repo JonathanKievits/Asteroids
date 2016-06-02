@@ -5,19 +5,19 @@ using UnityEngine.UI;
 
 public class Deathp1 : MonoBehaviour {
     
-    private int score;
+    private int life;
 
     void Start()
     {
-        score = 5;
+        life = 5;
     }
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Enemy"))
+        if (other.CompareTag("EnemyShip"))
         {
-            score--;
-            if (score == 0)
+            life-=1;
+            if (life == 0)
             {
                 SceneManager.LoadScene(0);
             }

@@ -28,7 +28,6 @@ public class PlayerShooting1_2 : MonoBehaviour
             ShootRight2();
         }
     }
-
     private void ShootRight2()
     {
         Projectile newProjectileR2 = Instantiate(

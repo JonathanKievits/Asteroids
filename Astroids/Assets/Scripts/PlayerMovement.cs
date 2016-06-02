@@ -35,8 +35,7 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetKey(KeyCode.A))
         {
             rotationSpeed = -7;
-        }
-        else if (Input.GetKey(KeyCode.D))
+        }else if (Input.GetKey(KeyCode.D))
         {
             rotationSpeed = 7;
         }
