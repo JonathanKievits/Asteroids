@@ -11,17 +11,29 @@ public class PlayerShooting1_1 : MonoBehaviour
     public Transform muzzle1_2_2;
     public float BallSpeed;
     public float fireRate = 0.1F;
-    public float nextFire = 0.5F;
+    public float nextFire = 0.2F;
 
     void Update()
     {
-        if (Input.GetKey(KeyCode.E) && Time.time > nextFire)
+        if (Input.GetKey(KeyCode.RightArrow) && Time.time > nextFire)
         {
             nextFire = Time.time + fireRate;
 
             ShootLeft1(); 
         }
-        if (Input.GetKey(KeyCode.Q) && Time.time > nextFire)
+        if (Input.GetKey(KeyCode.LeftArrow) && Time.time > nextFire)
+        {
+            nextFire = Time.time + fireRate;
+
+            ShootRight1();
+        }
+        if (Input.GetKey(KeyCode.Mouse1) && Time.time > nextFire)
+        {
+            nextFire = Time.time + fireRate;
+
+            ShootLeft1();
+        }
+        if (Input.GetKey(KeyCode.Mouse0) && Time.time > nextFire)
         {
             nextFire = Time.time + fireRate;
 
