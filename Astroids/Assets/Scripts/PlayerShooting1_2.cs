@@ -37,7 +37,7 @@ public class PlayerShooting1_2 : MonoBehaviour
             audio.PlayOneShot(ShotSound);
             ShootRight1();
         }
-        if (Input.GetKey(KeyCode.LeftArrow) && Time.time > nextFire)
+        if (Input.GetKey(KeyCode.RightArrow) && Time.time > nextFire)
         {
             nextFire = Time.time + fireRate;
             particles1.Play();
@@ -45,7 +45,7 @@ public class PlayerShooting1_2 : MonoBehaviour
             audio.PlayOneShot(ShotSound);
             ShootLeft1();
         }
-        if (Input.GetKey(KeyCode.RightArrow) && Time.time > nextFire)
+        if (Input.GetKey(KeyCode.LeftArrow) && Time.time > nextFire)
         {
             nextFire = Time.time + fireRate;
             particles3.Play();
