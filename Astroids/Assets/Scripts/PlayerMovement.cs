@@ -7,8 +7,11 @@ public class PlayerMovement : MonoBehaviour
     private Vector3 _movement = new Vector3();
     public Transform Front;
     public Vector3 rotation;
-    public float speed = 1;
-    public float backSpeed = 1;
+    float speed = 0f;
+    float maxSpeed = 7f;
+    float minSpeed = 0f;
+    float accel = .07f;
+    float DeAccel = .05f;
     public float rotationSpeed;
 
     void Awake()
@@ -20,17 +23,8 @@ public class PlayerMovement : MonoBehaviour
     {
         float x = 0;
         float z = 0;
-        if (Input.GetKey(KeyCode.W))
-        {
-            MoveFor ();
-        }
-        else if (Input.GetKey(KeyCode.S))
-        {
-            MoveBack();
-        }
-        
 
-        _movement = new Vector3(x, 0f, z);
+            _movement = new Vector3(x, 0f, z);
         transform.Rotate(rotation * rotationSpeed * Time.deltaTime);
         if (Input.GetKey(KeyCode.A))
         {
@@ -45,20 +39,25 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    private void MoveFor()
-    {
-        transform.Translate(Vector3.forward * speed * Time.deltaTime);
-    }
-
-    private void MoveBack()
-    {
-        transform.Translate(Vector3.back * backSpeed * Time.deltaTime);
-    }
-
     void FixedUpdate()
     {
-        Vector3 velocity = _movement * speed * Time.fixedDeltaTime;
-        _rigidbody.MovePosition(_rigidbody.position + velocity);
+        if (Input.GetKey(KeyCode.W))
+        {
+            speed += accel;
+        }
+        if (speed > maxSpeed)
+        {
+            speed = maxSpeed;
+        }
+        if (speed < minSpeed)
+        {
+            speed = minSpeed;
+        }
+        if (Input.GetKey(KeyCode.S))
+        {
+            speed -= DeAccel;
+        }
+        transform.Translate(Vector3.forward * speed * Time.deltaTime);
     }
 
 }
