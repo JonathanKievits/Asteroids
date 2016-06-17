@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class Deathp1 : MonoBehaviour {
     
     private int life;
+    public ParticleSystem particles1;
 
     void Start()
     {
@@ -19,7 +20,10 @@ public class Deathp1 : MonoBehaviour {
             life-=1;
             if (life == 0)
             {
-                SceneManager.LoadScene(0);
+                particles1.Play();
+                Destroy(gameObject, 1.5f);
+                //Inplaats van Dit ---> SceneManager.LoadScene(0);
+                // Show DeathScreen(Game hoeft niet gefreezed) en twee opties, Retry en return to main menu
             }
         }
     }

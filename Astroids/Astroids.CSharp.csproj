@@ -78,7 +78,10 @@
     <Compile Include="Assets\Scripts\Deathp1.cs" />
     <Compile Include="Assets\Scripts\Deathp2.cs" />
     <Compile Include="Assets\Scripts\EnemyMovement.cs" />
+    <Compile Include="Assets\Scripts\LoseGame.cs" />
+    <Compile Include="Assets\Scripts\MenuScript.cs" />
     <Compile Include="Assets\Scripts\OOBCounter.cs" />
+    <Compile Include="Assets\Scripts\PauseGame.cs" />
     <Compile Include="Assets\Scripts\Player2Shooting2_1.cs" />
     <Compile Include="Assets\Scripts\Player2Shooting2_2.cs" />
     <Compile Include="Assets\Scripts\PlayerMovement.cs" />

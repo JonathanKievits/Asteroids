@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Astroids.unity
+- path: Assets/Scene's/Astroids.unity
   isLoaded: 1
   isActive: 1

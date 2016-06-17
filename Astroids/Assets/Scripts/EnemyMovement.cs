@@ -7,8 +7,8 @@ public class EnemyMovement : MonoBehaviour
     public float rotationSpeed;
     public float movementSpeed;
     public float rotationTime;
-
     private float randomTime;
+    public ParticleSystem particles1;
 
     void Start()
     {
@@ -22,6 +22,15 @@ public class EnemyMovement : MonoBehaviour
             rotationSpeed = -rotationSpeed;
         }
         Invoke("ChangeRotation", rotationTime);
+    }
+    void OnTriggerEnter(Collider other)
+    {
+
+        if (other.gameObject.CompareTag("Projectile"))
+        {
+            particles1.Play();
+            Destroy(gameObject,1f);
+        }
     }
 
 
