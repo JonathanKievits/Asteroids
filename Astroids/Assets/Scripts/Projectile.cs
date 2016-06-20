@@ -22,13 +22,11 @@ public class Projectile : MonoBehaviour
         //scoreText.GetComponent<ScoreSaver>() = "Score: " + score.ToString();
         //hScoreText.text = "Highscore: " + highScore.ToString();
     }
-
     void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("EnemyShip"))
         {
             hitpoints();
-            Destroy(other.gameObject);
             Destroy(gameObject);
         }
     }
